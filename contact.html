@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wayanad Hilltop Holiday Resort</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="canonical" href="https://www.wayanadhiltop.com/contact.html">
+    <meta name="description" content="Contact Wayanad Hilltop Holiday Resort for inquiries, bookings, and more. Get in touch via our contact form, phone, or email.">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="main-header"></header>
+    <main id="main-content" class="page-section">
+        <div class="container">
+            <h1 class="section-title">Contact Us</h1>
+            <div class="contact-content">
+                <div class="card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Send us a Message</h3>
+                    <form id="contact-form" action="send_mail.php" method="POST">
+                        <input type="hidden" name="honeypot" value="">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkin">Check-in Date</label>
+                            <input type="date" id="checkin" name="checkin">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-out Date</label>
+                            <input type="date" id="checkout" name="checkout">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-status" style="margin-top: 1rem; padding: 1rem; border-radius: 5px; display: none;"></div>
+                </div>
+                <div class="contact-info card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Get in Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>{{RESORT_ADDRESS}}</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:{{RESORT_PHONE}}">{{RESORT_PHONE}}</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:{{RESORT_EMAIL_PRIMARY}}">{{RESORT_EMAIL_PRIMARY}}</a><br><a href="mailto:{{RESORT_EMAIL_SECONDARY}}">{{RESORT_EMAIL_SECONDARY}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="main-footer"></footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

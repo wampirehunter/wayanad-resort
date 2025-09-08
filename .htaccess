@@ -1,0 +1,20 @@
+<IfModule mod_headers.c>
+    # HSTS (Strict-Transport-Security)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+
+    # X-Frame-Options
+    Header always set X-Frame-Options SAMEORIGIN
+
+    # X-Content-Type-Options
+    Header always set X-Content-Type-Options nosniff
+
+    # Referrer-Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions-Policy
+    Header set Permissions-Policy "geolocation=(), midi=(), notifications=(), push=(), sync-xhr=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=(self), payment=()"
+
+    # Content-Security-Policy (adjust for your CDNs/scripts)
+    # This is a sample. You MUST customize this to your needs.
+    Header set Content-Security-Policy "default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com; img-src 'self' https://raw.githubusercontent.com data:; connect-src 'self' https://www.google-analytics.com;"
+</IfModule>
