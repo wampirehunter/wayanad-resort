@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <nav>
             <div class="nav-container">
                 <a href="index.html" class="logo">
-                    <img src="images/Logo.png" alt="Wayanad Hilltop Logo">
+                    <img src="/wayanad-resort/images/Logo.png" alt="Wayanad Hilltop Logo">
                 </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -157,4 +157,5 @@ document.addEventListener('DOMContentLoaded', function() {
             history.pushState({ path: newUrl }, '', newUrl);
         }, 3000);
     }
+
 });
