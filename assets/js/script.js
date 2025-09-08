@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Common header and footer injection
+    
+    // Define the correct, reusable HTML for the header and footer with absolute paths
     const headerMarkup = `
         <nav>
             <div class="nav-container">
-                <a href="index.html" class="logo">
+                <a href="/wayanad-resort/index.html" class="logo">
                     <img src="/wayanad-resort/images/Logo.png" alt="Wayanad Hilltop Logo">
                 </a>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="accommodations.html">Accommodations</a></li>
-                    <li><a href="amenities.html">Amenities</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="locations.html">Locations</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/wayanad-resort/index.html">Home</a></li>
+                    <li><a href="/wayanad-resort/about.html">About Us</a></li>
+                    <li><a href="/wayanad-resort/accommodations.html">Accommodations</a></li>
+                    <li><a href="/wayanad-resort/amenities.html">Amenities</a></li>
+                    <li><a href="/wayanad-resort/dining.html">Dining</a></li>
+                    <li><a href="/wayanad-resort/locations.html">Locations</a></li>
+                    <li><a href="/wayanad-resort/gallery.html">Gallery</a></li>
+                    <li><a href="/wayanad-resort/contact.html">Contact Us</a></li>
                 </ul>
                 <button class="mobile-menu">☰</button>
             </div>
@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="accommodations.html">Accommodations</a></li>
-                        <li><a href="amenities.html">Amenities</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="/wayanad-resort/about.html">About Us</a></li>
+                        <li><a href="/wayanad-resort/accommodations.html">Accommodations</a></li>
+                        <li><a href="/wayanad-resort/amenities.html">Amenities</a></li>
+                        <li><a href="/wayanad-resort/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -52,14 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Wayanad Hilltop Holiday Resort. All Rights Reserved.</p>
+            <p>© 2025 Wayanad Hilltop Holiday Resort. All Rights Reserved.</p>
         </div>
-        <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text={{DEFAULT_WHATSAPP_MESSAGE}}" 
+        <a href="https://wa.me/{{WHATSAPP_NUMBER}}?text={{DEFAULT_WHATSAPP_MESSAGE}}"
            class="whatsapp-float" target="_blank" title="Chat on WhatsApp" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 5.6 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 5.6-7.6 8.38 8.38 0 0 1 3.8-.9h.5A8.5 8.5 0 0 1 21 11.5z"></path></svg>
         </a>
     `;
 
+    // Inject the header and footer into the DOM
     document.getElementById('main-header').innerHTML = headerMarkup;
     document.getElementById('main-footer').innerHTML = footerMarkup;
     
@@ -157,5 +158,4 @@ document.addEventListener('DOMContentLoaded', function() {
             history.pushState({ path: newUrl }, '', newUrl);
         }, 3000);
     }
-
 });
